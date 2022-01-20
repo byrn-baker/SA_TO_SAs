@@ -1,0 +1,15 @@
+---
+- name: Create vlan
+  arista.eos.eos_vlan:
+    vlan_id: "{{ item.vlan_id }}"
+    name: "{{ item.name}}"
+    state: present
+  loop: "{{ configuration.vlans.vlan }}"
+
+- name: Add interfaces to vlan
+  arista.eos.eos_vlan:
+    vlan_id: "{{ item.vlan_id }}"
+    state: present
+    interfaces: "{{ item.interface }}"
+  loop: "{{ configuration.vlans.vlan }}"
+  when: item.interface is defined

@@ -1,0 +1,18 @@
+---
+configuration:
+  vlans:
+    vlan:
+      - name: "USERS"
+        vlan_id: "300"
+        interface: eth3
+
+      - name: "SERVERS"
+        vlan_id: "350"
+        interface: eth4
+
+      - name: "GUEST"
+        vlan_id: "400"
+        interface: eth5
+
+      - name: "NATIVE_VLAN"
+        vlan_id: "666"

@@ -1,0 +1,7 @@
+- name: configuring layer3 interfaces on {{ inventory_hostname }}
+  cisco.ios.ios_config:
+    src: add_l3_interfaces.j2
+
+- name: Saving the running config on {{ inventory_hostname }}
+  ios_config:
+    save_when: always

@@ -1,0 +1,15 @@
+---
+configuration:
+  interfaces:
+    trunk:
+      - name: Ethernet2
+        description: "TRUNK TO POD1SW2"
+        interface_mode: trunk
+        native_vlan:
+          members: "666"
+
+      - name: Ethernet3
+        description: "TRUNK TO POD1SW3"
+        interface_mode: trunk
+        native_vlan:
+          members: "666"

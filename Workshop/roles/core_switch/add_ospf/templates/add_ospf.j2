@@ -1,0 +1,5 @@
+{% if configuration.ospf is defined %}
+router ospf {{ configuration.ospf.instance }}
+    router-id {{ configuration.ospf.router_id }}
+    passive-interface Loopback 0
+{% endif %}

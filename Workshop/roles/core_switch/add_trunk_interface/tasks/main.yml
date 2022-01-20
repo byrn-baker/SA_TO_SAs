@@ -1,0 +1,9 @@
+- name: Configure layer2 trunk interfaces
+  arista.eos.eos_l2_interfaces:
+    config:
+    - name: "{{ item.name }}"
+      mode: "{{ item.interface_mode }}"
+      trunk:
+        native_vlan: "{{ item.native_vlan.members }}"
+    state: replaced
+  loop: "{{ configuration.interfaces.trunk }}"

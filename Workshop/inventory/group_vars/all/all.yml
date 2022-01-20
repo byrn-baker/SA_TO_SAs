@@ -1,0 +1,4 @@
+---
+# POD devices default login
+ansible_user: ansible
+ansible_password: ansible

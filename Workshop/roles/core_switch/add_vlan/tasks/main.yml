@@ -1,0 +1,7 @@
+---
+- name: Create vlan
+  arista.eos.eos_vlan:
+    vlan_id: "{{ item.vlan_id }}"
+    name: "{{ item.name}}"
+    state: present
+  loop: "{{ configuration.vlans.vlan }}"

@@ -1,0 +1,4 @@
+- name: render a Jinja2 template onto an Arista switch
+  arista.eos.eos_config:
+    src: add_ospf.j2
+    save_when: modified
